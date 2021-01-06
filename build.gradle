@@ -1,6 +1,11 @@
 buildscript {
 	repositories {
-		maven { url "https://repo.spring.io/plugins-release" }
+	//	maven { url "https://repo.spring.io/plugins-release" }
+
+		maven{ url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+		maven{ url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
+		maven { url "https://repo.spring.io/libs-spring-framework-build" }
+		maven { url "https://repo.springsource.org/plugins-release" }
 	}
 	dependencies {
 		classpath("io.spring.gradle:propdeps-plugin:0.0.8")
@@ -124,8 +129,15 @@ configure(allprojects) { project ->
 	}
 
 	repositories {
-		maven { url "https://repo.spring.io/libs-release" }
+	//	maven { url "https://repo.spring.io/libs-release" }
 		maven { url "https://repo.spring.io/milestone" }  // for AspectJ 1.9 beta
+
+		maven { url "https://maven.springframework.org/release/org/springframework/" }
+
+		maven{ url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+		maven{ url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
+		maven { url "https://repo.spring.io/libs-spring-framework-build" }
+		maven { url "https://repo.springsource.org/plugins-release" }
 	}
 
 	dependencies {
@@ -185,7 +197,7 @@ configure(subprojects - project(":spring-build-src")) { subproject ->
 			expand(copyright: new Date().format("yyyy"), version: project.version)
 		}
 	}
-
+  //  https://repo.spring.io/plugins-release
 	javadoc {
 		description = "Generates project-level javadoc for use in -javadoc jar"
 

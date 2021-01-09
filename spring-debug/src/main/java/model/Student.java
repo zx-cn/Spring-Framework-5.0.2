@@ -1,8 +1,5 @@
-package com.njupt;
+package model;
 
-import org.springframework.stereotype.Service;
-
-@Service("zxStudent")
 public class Student {
 
 	private String name="zhangxinak";

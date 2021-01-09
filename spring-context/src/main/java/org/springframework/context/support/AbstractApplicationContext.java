@@ -550,6 +550,8 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 
 				// Last step: publish corresponding event.
 				finishRefresh();
+
+				System.out.println("spring 加载完毕!!!!!!!");
 			}
 
 			catch (BeansException ex) {
